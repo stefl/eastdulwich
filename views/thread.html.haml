@@ -1,0 +1,7 @@
+%section.thread
+  - @posts.each do |post|
+    %article
+      .article--author
+        = post[:person][:nickname] rescue "Huh"
+      .article--body
+        = post[:content_html]
