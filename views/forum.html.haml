@@ -5,9 +5,10 @@
         %span.ss-icon
           comment
         = thread[:posts_count]
-        %span.ss-icon
-          view
-        = thread[:view_count]
+        - if false
+          %span.ss-icon
+            view
+          = thread[:view_count]
       .thread--title
         %a{:href=>thread[:url]}
           = thread[:title]
