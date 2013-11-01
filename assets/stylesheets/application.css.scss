@@ -1,0 +1,195 @@
+$base-font-size: 18px;
+$base-line-height: 32px;
+
+@import "compass/reset";
+@import "compass/utilities/links/link-colors";
+@import "compass/typography/vertical_rhythm";
+@import "susy";
+@import "ss-standard";
+
+$link-color: #2255bb;
+a {
+  // normal, hover, active, visited, focus
+  @include link-colors($link-color, lighten($link-color, 10), lighten($link-color, 20), lighten(desaturate($link-color, 30),20), lighten($link-color, 20));
+}
+
+@mixin breakpoint-typography($font-size, $line-height) {
+  $base-font-size: $font-size;
+  $base-line-height: $line-height;
+  html {
+    // @include baseline-grid-background($line-height);
+  }
+  
+  @include establish-baseline();
+  h1 {
+    @include adjust-font-size-to($base-font-size*2,2);
+    font-weight: 100;
+    a {
+      color: #222;
+      text-decoration: none;
+    }
+  }
+  .giga {
+    @include adjust-font-size-to($base-font-size*2,2);
+  }
+  .mega {
+    @include adjust-font-size-to($base-font-size*1.75,2);
+  }
+  p, li, ul {
+    @include adjust-leading-to(1, $base-font-size);
+  }
+}
+
+$breakpoint-unit: 16px;
+
+@include at-breakpoint(0px 6 (30 * $breakpoint-unit)) {
+  @include breakpoint-typography(14px, 28px);
+}
+
+@include at-breakpoint((30 * $breakpoint-unit) 12 (50 * $breakpoint-unit)) {
+  @include breakpoint-typography(16px, 32px);
+}
+
+@include at-breakpoint((50 * $breakpoint-unit) 12) {
+  @include breakpoint-typography(18px, 36px);
+}
+
+#main {
+  @include container();
+  font-family: 'PT Serif', serif;
+}
+
+#brand {
+  @include leader(1);
+  @include trailer(1);
+  a {
+    color: #222;
+  }
+}
+
+h1, h2, h3, h4, h5, .giga, .mega {
+  font-family: 'Signika', sans-serif;
+  color: #222;
+}
+
+p {
+  @include trailer(1);
+}
+
+.forum {
+  @include trailer(0);
+}
+
+.thread {
+  @include trailer(0);
+}
+
+.article--body-html {
+  max-width: 32em;
+}
+
+.article--author {
+  font-style: italic;
+}
+
+.thread--opener, article {
+  @include trailer(1);
+}
+
+.thread--back {
+  a {
+    text-decoration: none;
+  }
+}
+
+.thread--meta {
+  color: #7a6a5a;
+}
+
+.thread--attachments {
+  img {
+    max-width: 100%;
+  }
+}
+
+hr {
+  border: 0px;
+  border-top: 1px solid #ddd;
+}
+.edited {
+  color: #aaa;
+  font-style: italic;
+  @include trailer(0);
+  @include adjust-font-size-to(12px, 1);
+}
+
+.original-thread {
+  @include span-columns(12 omega, 12);
+}
+
+blockquote {
+  font-style: italic;
+  color: #888;
+}
+
+@include at-breakpoint((30 * $breakpoint-unit) 12) {
+  .thread--attachments {
+    @include pre(2);
+  }
+  .threads {
+    .thread {
+      @include span-columns(12 omega, 12);
+      .thread--meta {
+        @include span-columns(2, 12);
+        @include adjust-font-size-to(12px, 1);
+      }
+      .thread--title {
+        @incclude span-columns(10, 12);
+      }
+    }
+  }
+  .thread--opener {
+    @include span-columns(10 omega, 12); 
+  }
+
+  article {
+    @include span-columns(12 omega, 12);
+    border-top: 1px solid #eaeae5;
+    color: #222;
+  }
+
+  .article--author {
+    @include span-columns(2, 12);
+    color: #7a6a5a;
+  }
+
+  .article--body {
+    @include span-columns(10 omega, 12);
+  }
+  .thread {
+    .thread--back {
+      @include span-columns(1, 12);
+    }
+    header h2 {
+      @include pre(1);
+      @include span-columns(10 omega, 12);
+    }
+  }
+
+  .forums {
+    @include pre(2);
+  }
+  footer {
+    @include pre(2);
+    @include span-columns(10 omega, 12);
+  }
+
+  #brand {
+    @include pre(2);
+  }
+}
+
+footer {
+  @include leader(2);
+  @include span-columns(12 omega, 12);
+}

@@ -1,7 +1,26 @@
 %section.thread
+  %header
+    .thread--back.mega
+      %a{:href=>"/forums/#{params[:forum_id]}"} ←
+    %h2.mega
+      = @thread[:title]
+    .article--author
+      = @thread[:person][:nickname]
+    .thread--opener
+      .article--body-html
+        = @thread[:content_html]
+    - if !@thread[:attachments].blank?
+      .thread--attachments
+        - @thread[:attachments].each do |attachment|
+          .thread--attachment
+            %img{:src=>attachment[:url]}
   - @posts.each do |post|
     %article
       .article--author
         = post[:person][:nickname] rescue "Huh"
       .article--body
-        = post[:content_html]
+        .article--body-html>
+          = post[:content_html]
+
+%p.original-thread
+  %a{:href=>@thread[:original_url]} Original thread

@@ -1,4 +1,17 @@
-- @posts.each do |post|
-  .post
-    %a{:href=>post[:url]}
-      = post[:title]
+.threads
+  - @threads.each do |thread|
+    .thread
+      .thread--meta
+        %span.ss-icon
+          comment
+        = thread[:posts_count]
+        %span.ss-icon
+          view
+        = thread[:view_count]
+      .thread--title
+        %a{:href=>thread[:url]}
+          = thread[:title]
+      - unless thread[:attachments].blank?
+        .thread--image
+          %img{:src=>thread[:attachments].first[:url]}
+      

@@ -1,4 +1,5 @@
-- @forums.each do |forum|
-  .forum
-    %a{:href=>forum[:url]}
-      = forum[:name]
+.forums
+  - @forums.each do |forum|
+    .mega.forum        
+      %a{:href=>forum[:url]}
+        = forum[:name]

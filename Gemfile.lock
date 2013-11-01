@@ -8,9 +8,27 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     atomic (1.1.14)
+    chunky_png (1.2.8)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    daemons (1.1.9)
+    domain_name (0.5.14)
+      unf (>= 0.0.5, < 1.0.0)
+    eventmachine (1.0.3)
+    execjs (2.0.2)
+    fssm (0.2.10)
     git (1.2.5)
     haml (4.0.3)
       tilt
+    hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     http_router (0.5.4)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -19,12 +37,24 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.7.0)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0.0)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mime-types (1.25)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    ntlm-http (0.1.1)
     padrino (0.9.21)
       padrino-admin (= 0.9.21)
       padrino-cache (= 0.9.21)
@@ -59,16 +89,45 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
+    rake (10.1.0)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
+    sass (3.2.12)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    sinatra-asset-pipeline (0.3.1)
+      coffee-script
+      rake
+      sass
+      sinatra
+      sprockets
+      sprockets-helpers
+      sprockets-sass
     sinatra-respond_to (0.9.0)
       sinatra (~> 1.3)
+    sinatra-static-assets (1.0.4)
+      sinatra (>= 1.1.0)
+    sprockets (2.10.0)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-helpers (1.0.1)
+      sprockets (~> 2.0)
+    sprockets-sass (1.0.2)
+      sprockets (~> 2.0)
+      tilt (~> 1.1)
+    susy (1.0.9)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -77,19 +136,29 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    unf (0.1.3)
+      unf_ext
+    unf_ext (0.0.6)
     url_mount (0.2.1)
       rack
+    webrobots (0.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   haml
   json
+  mechanize (= 2.7.0)
   nokogiri
   padrino
   puma
   sanitize
   shotgun
   sinatra
+  sinatra-asset-pipeline
   sinatra-respond_to
+  sinatra-static-assets
+  susy
+  thin
