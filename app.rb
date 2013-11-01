@@ -58,7 +58,6 @@ end
 class EastDulwich < Sinatra::Base
   register Sinatra::RespondTo
   register Sinatra::AssetPipeline
-  register Sinatra::StaticAssets
 
   set :assets_precompile, %w(*.js *.css *.png *.jpg *.svg *.eot *.ttf *.woff)
 
