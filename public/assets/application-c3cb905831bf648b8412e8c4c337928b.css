@@ -1,0 +1,1388 @@
+@charset "UTF-8";
+/* line 17, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-standard.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSStandard";
+  src: url("/assets/ss-standard-a4fce0fa253f4238c3f79f749c804c26.eot");
+  src: url("/assets/ss-standard-a4fce0fa253f4238c3f79f749c804c26.eot?#iefix") format("embedded-opentype"), url("/assets/ss-standard-ad6963a7f24783766215a9e626267eb0.woff") format("woff"), url("/assets/ss-standard-eb77806d7d1ccb30315cbc854307cef0.ttf") format("truetype"), url("/assets/ss-standard-7d9959a648e4fb3a6b1d94c6d37c6249.svg#SSStandard") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+/* line 25, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+html:hover [class^="ss-"] {
+  -ms-zoom: 1;
+}
+
+/* line 31, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-icon, .ss-icon.ss-standard,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 48, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before {
+  display: none;
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-cursor:before, .ss-cursor.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-crosshair:before, .ss-crosshair.right:after {
+  content: '⌖';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-search:before, .ss-search.right:after {
+  content: '🔎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-zoomin:before, .ss-zoomin.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-zoomout:before, .ss-zoomout.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-view:before, .ss-view.right:after {
+  content: '👀';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-attach:before, .ss-attach.right:after {
+  content: '📎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-link:before, .ss-link.right:after {
+  content: '🔗';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-move:before, .ss-move.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-write:before, .ss-write.right:after {
+  content: '✎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-writingdisabled:before, .ss-writingdisabled.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-erase:before, .ss-erase.right:after {
+  content: '✐';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-compose:before, .ss-compose.right:after {
+  content: '📝';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-lock:before, .ss-lock.right:after {
+  content: '🔒';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-unlock:before, .ss-unlock.right:after {
+  content: '🔓';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-key:before, .ss-key.right:after {
+  content: '🔑';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-backspace:before, .ss-backspace.right:after {
+  content: '⌫';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-ban:before, .ss-ban.right:after {
+  content: '🚫';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-trash:before, .ss-trash.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-target:before, .ss-target.right:after {
+  content: '◎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-tag:before, .ss-tag.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-bookmark:before, .ss-bookmark.right:after {
+  content: '🔖';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-flag:before, .ss-flag.right:after {
+  content: '⚑';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-like:before, .ss-like.right:after {
+  content: '👍';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-dislike:before, .ss-dislike.right:after {
+  content: '👎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-heart:before, .ss-heart.right:after {
+  content: '♥';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-halfheart:before, .ss-halfheart.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-star:before, .ss-star.right:after {
+  content: '⋆';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-halfstar:before, .ss-halfstar.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-sample:before, .ss-sample.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-crop:before, .ss-crop.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-layers:before, .ss-layers.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-fill:before, .ss-fill.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-stroke:before, .ss-stroke.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-phone:before, .ss-phone.right:after {
+  content: '📞';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-phonedisabled:before, .ss-phonedisabled.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-rss:before, .ss-rss.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-facetime:before, .ss-facetime.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-reply:before, .ss-reply.right:after {
+  content: '↩';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-send:before, .ss-send.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-inbox:before, .ss-inbox.right:after {
+  content: '📥';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-chat:before, .ss-chat.right:after {
+  content: '💬';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-ellipsischat:before, .ss-ellipsischat.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-ellipsis:before, .ss-ellipsis.right:after {
+  content: '…';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-user:before, .ss-user.right:after {
+  content: '👤';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-femaleuser:before, .ss-femaleuser.right:after {
+  content: '👧';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-users:before, .ss-users.right:after {
+  content: '👥';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-cart:before, .ss-cart.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-creditcard:before, .ss-creditcard.right:after {
+  content: '💳';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-dollarsign:before, .ss-dollarsign.right:after {
+  content: '💲';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-barchart:before, .ss-barchart.right:after {
+  content: '📊';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-piechart:before, .ss-piechart.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-box:before, .ss-box.right:after {
+  content: '📦';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-home:before, .ss-home.right:after {
+  content: '⌂';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-buildings:before, .ss-buildings.right:after {
+  content: '🏢';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-warehouse:before, .ss-warehouse.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-globe:before, .ss-globe.right:after {
+  content: '🌎';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-navigate:before, .ss-navigate.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-compass:before, .ss-compass.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-signpost:before, .ss-signpost.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-map:before, .ss-map.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-location:before, .ss-location.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-pin:before, .ss-pin.right:after {
+  content: '📍';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-database:before, .ss-database.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-hdd:before, .ss-hdd.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-music:before, .ss-music.right:after {
+  content: '♫';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-mic:before, .ss-mic.right:after {
+  content: '🎤';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-volume:before, .ss-volume.right:after {
+  content: '🔈';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-lowvolume:before, .ss-lowvolume.right:after {
+  content: '🔉';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-highvolume:before, .ss-highvolume.right:after {
+  content: '🔊';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-airplay:before, .ss-airplay.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-camera:before, .ss-camera.right:after {
+  content: '📷';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-picture:before, .ss-picture.right:after {
+  content: '🌄';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-video:before, .ss-video.right:after {
+  content: '📹';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-play:before, .ss-play.right:after {
+  content: '▶';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-pause:before, .ss-pause.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-stop:before, .ss-stop.right:after {
+  content: '■';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-record:before, .ss-record.right:after {
+  content: '●';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-rewind:before, .ss-rewind.right:after {
+  content: '⏪';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-fastforward:before, .ss-fastforward.right:after {
+  content: '⏩';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-skipback:before, .ss-skipback.right:after {
+  content: '⏮';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-skipforward:before, .ss-skipforward.right:after {
+  content: '⏭';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-eject:before, .ss-eject.right:after {
+  content: '⏏';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-repeat:before, .ss-repeat.right:after {
+  content: '🔁';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-replay:before, .ss-replay.right:after {
+  content: '↺';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-shuffle:before, .ss-shuffle.right:after {
+  content: '🔀';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-book:before, .ss-book.right:after {
+  content: '📕';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-openbook:before, .ss-openbook.right:after {
+  content: '📖';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-notebook:before, .ss-notebook.right:after {
+  content: '📓';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-newspaper:before, .ss-newspaper.right:after {
+  content: '📰';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-grid:before, .ss-grid.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-rows:before, .ss-rows.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-columns:before, .ss-columns.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-thumbnails:before, .ss-thumbnails.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-filter:before, .ss-filter.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-desktop:before, .ss-desktop.right:after {
+  content: '💻';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-laptop:before, .ss-laptop.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-tablet:before, .ss-tablet.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-cell:before, .ss-cell.right:after {
+  content: '📱';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-battery:before, .ss-battery.right:after {
+  content: '🔋';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-highbattery:before, .ss-highbattery.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-mediumbattery:before, .ss-mediumbattery.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-lowbattery:before, .ss-lowbattery.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-emptybattery:before, .ss-emptybattery.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-lightbulb:before, .ss-lightbulb.right:after {
+  content: '💡';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-downloadcloud:before, .ss-downloadcloud.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-download:before, .ss-download.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-uploadcloud:before, .ss-uploadcloud.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-upload:before, .ss-upload.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-fork:before, .ss-fork.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-merge:before, .ss-merge.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-transfer:before, .ss-transfer.right:after {
+  content: '⇆';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-refresh:before, .ss-refresh.right:after {
+  content: '↻';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-sync:before, .ss-sync.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-loading:before, .ss-loading.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-wifi:before, .ss-wifi.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-connection:before, .ss-connection.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-file:before, .ss-file.right:after {
+  content: '📄';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-folder:before, .ss-folder.right:after {
+  content: '📁';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-quote:before, .ss-quote.right:after {
+  content: '“';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-text:before, .ss-text.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-font:before, .ss-font.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-print:before, .ss-print.right:after {
+  content: '⎙';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-fax:before, .ss-fax.right:after {
+  content: '📠';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-list:before, .ss-list.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-layout:before, .ss-layout.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-action:before, .ss-action.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-redirect:before, .ss-redirect.right:after {
+  content: '↪';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-expand:before, .ss-expand.right:after {
+  content: '⤢';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-contract:before, .ss-contract.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-help:before, .ss-help.right:after {
+  content: '❓';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-info:before, .ss-info.right:after {
+  content: 'ℹ';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-alert:before, .ss-alert.right:after {
+  content: '⚠';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-caution:before, .ss-caution.right:after {
+  content: '⛔';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-logout:before, .ss-logout.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-plus:before, .ss-plus.right:after {
+  content: '+';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-hyphen:before, .ss-hyphen.right:after {
+  content: '-';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-check:before, .ss-check.right:after {
+  content: '✓';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-delete:before, .ss-delete.right:after {
+  content: '␡';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-settings:before, .ss-settings.right:after {
+  content: '⚙';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-dashboard:before, .ss-dashboard.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-notifications:before, .ss-notifications.right:after {
+  content: '🔔';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-notificationsdisabled:before, .ss-notificationsdisabled.right:after {
+  content: '🔕';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-clock:before, .ss-clock.right:after {
+  content: '⏲';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-stopwatch:before, .ss-stopwatch.right:after {
+  content: '⏱';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-calendar:before, .ss-calendar.right:after {
+  content: '📅';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-addcalendar:before, .ss-addcalendar.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-removecalendar:before, .ss-removecalendar.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-checkcalendar:before, .ss-checkcalendar.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-deletecalendar:before, .ss-deletecalendar.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-briefcase:before, .ss-briefcase.right:after {
+  content: '💼';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-cloud:before, .ss-cloud.right:after {
+  content: '☁';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-droplet:before, .ss-droplet.right:after {
+  content: '💧';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-flask:before, .ss-flask.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-up:before, .ss-up.right:after {
+  content: '⬆';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-upright:before, .ss-upright.right:after {
+  content: '⬈';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-right:before, .ss-right.right:after {
+  content: '➡';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-downright:before, .ss-downright.right:after {
+  content: '⬊';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-down:before, .ss-down.right:after {
+  content: '⬇';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-downleft:before, .ss-downleft.right:after {
+  content: '⬋';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-left:before, .ss-left.right:after {
+  content: '⬅';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-upleft:before, .ss-upleft.right:after {
+  content: '⬉';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-navigateup:before, .ss-navigateup.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-navigateright:before, .ss-navigateright.right:after {
+  content: '▻';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-navigatedown:before, .ss-navigatedown.right:after {
+  content: '';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-navigateleft:before, .ss-navigateleft.right:after {
+  content: '◅';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-directup:before, .ss-directup.right:after {
+  content: '▴';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-directright:before, .ss-directright.right:after {
+  content: '▹';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-dropdown:before, .ss-dropdown.right:after {
+  content: '▾';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-directleft:before, .ss-directleft.right:after {
+  content: '◃';
+}
+
+/* line 50, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-retweet:before, .ss-retweet.right:after {
+  content: '';
+}
+
+/* Legacy classes */
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-volumelow:before, .ss-volumelow.right:after {
+  content: '🔉';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-volumehigh:before, .ss-volumehigh.right:after {
+  content: '🔊';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-batteryhigh:before, .ss-batteryhigh.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-batterymedium:before, .ss-batterymedium.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-batterylow:before, .ss-batterylow.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-batteryempty:before, .ss-batteryempty.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-clouddownload:before, .ss-clouddownload.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-cloudupload:before, .ss-cloudupload.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-calendaradd:before, .ss-calendaradd.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-calendarremove:before, .ss-calendarremove.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-calendarcheck:before, .ss-calendarcheck.right:after {
+  content: '';
+}
+
+/* line 53, /apps/ed/assets/stylesheets/_ss-standard.css.scss */
+.ss-calendardelete:before, .ss-calendardelete.right:after {
+  content: '';
+}
+
+/* line 11, /apps/ed/assets/stylesheets/application.css.scss */
+a {
+  color: #2255bb;
+}
+/* line 18, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: #7d95c6;
+}
+/* line 21, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: #618ce2;
+}
+/* line 24, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #366dda;
+}
+/* line 27, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #618ce2;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  /* line 61, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  * html {
+    font-size: 87.5%;
+  }
+
+  /* line 64, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  html {
+    font-size: 14px;
+    line-height: 2em;
+  }
+
+  /* line 24, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 100;
+  }
+  /* line 27, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  /* line 32, /apps/ed/assets/stylesheets/application.css.scss */
+  .giga {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  /* line 35, /apps/ed/assets/stylesheets/application.css.scss */
+  .mega {
+    font-size: 1.75em;
+    line-height: 2.28571em;
+  }
+
+  /* line 38, /apps/ed/assets/stylesheets/application.css.scss */
+  p, li, ul {
+    line-height: 2em;
+  }
+}
+@media (min-width: 480px) and (max-width: 800px) {
+  /* line 61, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  * html {
+    font-size: 100%;
+  }
+
+  /* line 64, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  html {
+    font-size: 16px;
+    line-height: 2em;
+  }
+
+  /* line 24, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 100;
+  }
+  /* line 27, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  /* line 32, /apps/ed/assets/stylesheets/application.css.scss */
+  .giga {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  /* line 35, /apps/ed/assets/stylesheets/application.css.scss */
+  .mega {
+    font-size: 1.75em;
+    line-height: 2.28571em;
+  }
+
+  /* line 38, /apps/ed/assets/stylesheets/application.css.scss */
+  p, li, ul {
+    line-height: 2em;
+  }
+}
+@media (min-width: 800px) {
+  /* line 61, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  * html {
+    font-size: 112.5%;
+  }
+
+  /* line 64, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+  html {
+    font-size: 18px;
+    line-height: 2em;
+  }
+
+  /* line 24, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+    font-weight: 100;
+  }
+  /* line 27, /apps/ed/assets/stylesheets/application.css.scss */
+  h1 a {
+    color: #222;
+    text-decoration: none;
+  }
+
+  /* line 32, /apps/ed/assets/stylesheets/application.css.scss */
+  .giga {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  /* line 35, /apps/ed/assets/stylesheets/application.css.scss */
+  .mega {
+    font-size: 1.75em;
+    line-height: 2.28571em;
+  }
+
+  /* line 38, /apps/ed/assets/stylesheets/application.css.scss */
+  p, li, ul {
+    line-height: 2em;
+  }
+}
+/* line 57, /apps/ed/assets/stylesheets/application.css.scss */
+#main {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'PT Serif', serif;
+}
+/* line 38, /Users/stef/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 62, /apps/ed/assets/stylesheets/application.css.scss */
+#brand {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+/* line 65, /apps/ed/assets/stylesheets/application.css.scss */
+#brand a {
+  color: #222;
+}
+
+/* line 70, /apps/ed/assets/stylesheets/application.css.scss */
+h1, h2, h3, h4, h5, .giga, .mega {
+  font-family: 'Signika', sans-serif;
+  color: #222;
+}
+
+/* line 75, /apps/ed/assets/stylesheets/application.css.scss */
+p {
+  margin-bottom: 2em;
+}
+
+/* line 79, /apps/ed/assets/stylesheets/application.css.scss */
+.forum {
+  margin-bottom: 0em;
+}
+
+/* line 83, /apps/ed/assets/stylesheets/application.css.scss */
+.thread {
+  margin-bottom: 0em;
+}
+
+/* line 87, /apps/ed/assets/stylesheets/application.css.scss */
+.article--body-html {
+  max-width: 32em;
+}
+
+/* line 91, /apps/ed/assets/stylesheets/application.css.scss */
+.article--author {
+  font-style: italic;
+}
+
+/* line 95, /apps/ed/assets/stylesheets/application.css.scss */
+.thread--opener, article {
+  margin-bottom: 2em;
+}
+
+/* line 100, /apps/ed/assets/stylesheets/application.css.scss */
+.thread--back a {
+  text-decoration: none;
+}
+
+/* line 105, /apps/ed/assets/stylesheets/application.css.scss */
+.thread--meta {
+  color: #7a6a5a;
+}
+
+/* line 110, /apps/ed/assets/stylesheets/application.css.scss */
+.thread--attachments img {
+  max-width: 100%;
+}
+
+/* line 115, /apps/ed/assets/stylesheets/application.css.scss */
+hr {
+  border: 0px;
+  border-top: 1px solid #ddd;
+}
+
+/* line 119, /apps/ed/assets/stylesheets/application.css.scss */
+.edited {
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 0em;
+  font-size: 0.66667em;
+  line-height: 3em;
+}
+
+/* line 126, /apps/ed/assets/stylesheets/application.css.scss */
+.original-thread {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/* line 130, /apps/ed/assets/stylesheets/application.css.scss */
+blockquote {
+  font-style: italic;
+  color: #888;
+}
+
+@media (min-width: 480px) {
+  /* line 136, /apps/ed/assets/stylesheets/application.css.scss */
+  .thread--attachments {
+    margin-left: 16.94915%;
+  }
+
+  /* line 140, /apps/ed/assets/stylesheets/application.css.scss */
+  .threads .thread {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 142, /apps/ed/assets/stylesheets/application.css.scss */
+  .threads .thread .thread--meta {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    font-size: 0.66667em;
+    line-height: 3em;
+  }
+  /* line 146, /apps/ed/assets/stylesheets/application.css.scss */
+  .threads .thread .thread--title {
+    @incclude span-columns(10, 12);
+  }
+
+  /* line 151, /apps/ed/assets/stylesheets/application.css.scss */
+  .thread--opener {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 155, /apps/ed/assets/stylesheets/application.css.scss */
+  article {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    border-top: 1px solid #eaeae5;
+    color: #222;
+  }
+
+  /* line 161, /apps/ed/assets/stylesheets/application.css.scss */
+  .article--author {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    color: #7a6a5a;
+  }
+
+  /* line 166, /apps/ed/assets/stylesheets/application.css.scss */
+  .article--body {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 170, /apps/ed/assets/stylesheets/application.css.scss */
+  .thread .thread--back {
+    width: 6.77966%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 173, /apps/ed/assets/stylesheets/application.css.scss */
+  .thread header h2 {
+    margin-left: 8.47458%;
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 179, /apps/ed/assets/stylesheets/application.css.scss */
+  .forums {
+    margin-left: 16.94915%;
+  }
+
+  /* line 182, /apps/ed/assets/stylesheets/application.css.scss */
+  footer {
+    margin-left: 16.94915%;
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 187, /apps/ed/assets/stylesheets/application.css.scss */
+  #brand {
+    margin-left: 16.94915%;
+  }
+}
+/* line 192, /apps/ed/assets/stylesheets/application.css.scss */
+footer {
+  margin-top: 4em;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}

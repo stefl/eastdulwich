@@ -60,6 +60,8 @@ class EastDulwich < Sinatra::Base
   register Sinatra::AssetPipeline
   register Sinatra::StaticAssets
 
+  set :assets_precompile, %w(*.js *.css *.png *.jpg *.svg *.eot *.ttf *.woff)
+
   enable :sessions
   set :session_secret, ENV["SESSION_KEY"] || 'not strongly encrypted' 
   enable :logging
