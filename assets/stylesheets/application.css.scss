@@ -96,7 +96,7 @@ p {
   @include trailer(1);
 }
 
-.thread--back {
+.thread--back, .forum--back {
   a {
     text-decoration: none;
   }
@@ -144,10 +144,20 @@ blockquote {
         @include adjust-font-size-to(12px, 1);
       }
       .thread--title {
-        @incclude span-columns(10, 12);
+        @include span-columns(10 omega, 12);
       }
     }
   }
+
+  .forum--header {
+    .forum--back {
+      @include span-columns(2, 12);
+    }
+    .forum--title {
+      @include span-columns(10 omega, 12);
+    }
+  }
+
   .thread--opener {
     @include span-columns(10 omega, 12); 
   }

@@ -1,4 +1,10 @@
 .threads
+  %header.forum--header
+    .forum--back.mega
+      %a{:href=>"/forums/#{params[:id]}"} ←
+    .forum--title
+      %h2.mega
+        = @forum[:title]
   - @threads.each do |thread|
     .thread
       .thread--meta
@@ -15,4 +21,8 @@
       - unless thread[:attachments].blank?
         .thread--image
           %img{:src=>thread[:attachments].first[:url]}
-      
+
+%p.original-thread
+  %a{:href=>@forum[:original_url]} Original page
+  |
+  %a{:href=>request.path + ".json"} JSON      

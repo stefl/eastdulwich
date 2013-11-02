@@ -124,7 +124,14 @@ class EastDulwich < Sinatra::Base
   end
 
   get "/forums/:id" do
-    doc = Nokogiri::HTML(open("http://www.eastdulwichforum.co.uk/forum/list.php?#{params[:id]}").read)
+    original_url = "http://www.eastdulwichforum.co.uk/forum/list.php?#{params[:id]}"
+    doc = Nokogiri::HTML(open(original_url).read)
+    title = doc.css(".PhorumNavBlock2").first.css("a").last.text
+    @forum = {
+      original_url: original_url,
+      title: title,
+      id: params[:id].to_i
+    }
     @threads = []
     doc.search("table").first.css("tr").each do |i|
       a_tag = i.css("a")[0]
@@ -149,7 +156,7 @@ class EastDulwich < Sinatra::Base
     end
     respond_to do |f|
       f.html { haml :'forum' }
-      f.json { @threads.to_json }
+      f.json { { forum: @forum, threads: @threads.to_json } }
     end
   end
 
