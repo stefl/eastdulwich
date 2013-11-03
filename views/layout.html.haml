@@ -13,15 +13,16 @@
     %link{:rel=>"stylesheet", :href=>asset_path("application.css")}
 
     %title East Dulwich Forum
-  %body
+  %body{:class => defined?(@home) ? "home" : "internal"}
     #main
       #brand
         %h1
-          %a{:href=>"/"} East Dulwich (Mobile) Forum
+          %a{:href=>"/"} 
+            East Dulwich (Mobile) Forum
 
       = yield
 
       %footer
         %p 
           This is an unofficial experiment at providing a mobile-friendly view of the popular East Dulwich Forum. This is not intended as a criticism of that site - I just can't read it on my phone! Hacked together very quickly by 
-          %a{:href=>"http://twitter.com/stef"} @stef
+          %a{:href=>"http://twitter.com/stef"} @stef  }

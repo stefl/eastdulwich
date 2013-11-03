@@ -1,10 +1,11 @@
 .threads
   %header.forum--header
     .forum--back.mega
-      %a{:href=>"/forums/#{params[:id]}"} ←
+      %a{:href=>"/"} ←
     .forum--title
       %h2.mega
         = @forum[:title]
+
   - @threads.each do |thread|
     .thread
       .thread--meta
@@ -18,6 +19,10 @@
       .thread--title
         %a{:href=>thread[:url]}
           = thread[:title]
+      .thread--dates
+        .datetime
+          = distance_of_time_in_words(Time.now, thread[:updated_at])
+          ago
       - unless thread[:attachments].blank?
         .thread--image
           %img{:src=>thread[:attachments].first[:url]}

@@ -13,6 +13,15 @@ a {
   @include link-colors($link-color, lighten($link-color, 10), lighten($link-color, 20), lighten(desaturate($link-color, 30),20), lighten($link-color, 20));
 }
 
+body.internal {
+  #brand {
+    @include trailer(0);
+  }
+  #brand h1 {
+    @include adjust-font-size-to($base-font-size*1,2);
+  }
+}
+
 @mixin breakpoint-typography($font-size, $line-height) {
   $base-font-size: $font-size;
   $base-line-height: $line-height;
@@ -33,7 +42,10 @@ a {
     @include adjust-font-size-to($base-font-size*2,2);
   }
   .mega {
-    @include adjust-font-size-to($base-font-size*1.75,2);
+    @include adjust-font-size-to($base-font-size*1.75,1);
+  }
+  .kila {
+    @include adjust-font-size-to($base-font-size*1.333,1);
   }
   p, li, ul {
     @include adjust-leading-to(1, $base-font-size);
@@ -67,9 +79,14 @@ $breakpoint-unit: 16px;
   }
 }
 
+.datetime {
+  font-style: italic;
+}
+
 h1, h2, h3, h4, h5, .giga, .mega {
   font-family: 'Signika', sans-serif;
   color: #222;
+  @include trailer(0.5);
 }
 
 p {
@@ -90,6 +107,12 @@ p {
 
 .article--author {
   font-style: italic;
+  .author {
+    @include trailer(0);
+  }
+  .datetime {
+    color: lighten(#7a6a5a,30);
+  }
 }
 
 .thread--opener, article {
@@ -127,6 +150,12 @@ hr {
   @include span-columns(12 omega, 12);
 }
 
+.forums {
+  .forum {
+    @include trailer(0.5);
+  }
+}
+
 blockquote {
   font-style: italic;
   color: #888;
@@ -144,7 +173,13 @@ blockquote {
         @include adjust-font-size-to(12px, 1);
       }
       .thread--title {
-        @include span-columns(10 omega, 12);
+        @include span-columns(8, 12);
+      }
+      .thread--dates {
+        @include span-columns(2 omega, 12);
+        .datetime {
+          color: lighten(#7a6a5a,30);
+        }
       }
     }
   }

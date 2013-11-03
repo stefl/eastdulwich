@@ -12,6 +12,8 @@ require 'padrino-helpers'
 require 'sinatra/respond_to'
 require 'sinatra/asset_pipeline'
 require 'sinatra/static_assets'
+require 'i18n'
+require 'i18n/backend/fallbacks'
 
 class Sanitize
   module Config
@@ -58,6 +60,7 @@ end
 class EastDulwich < Sinatra::Base
   register Sinatra::RespondTo
   register Sinatra::AssetPipeline
+  helpers Padrino::Helpers::FormatHelpers
 
   set :assets_precompile, %w(*.js *.css *.png *.jpg *.svg *.eot *.ttf *.woff)
 
@@ -65,9 +68,26 @@ class EastDulwich < Sinatra::Base
   set :session_secret, ENV["SESSION_KEY"] || 'not strongly encrypted' 
   enable :logging
 
+  configure do
+    I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
+    I18n.load_path = Dir[File.join(settings.root, 'locales', '*.yml')]
+    I18n.backend.load_translations
+  end
+
   helpers do
+
     def base_host
       @base_host = "http://#{request.host}:#{request.port != 80 ? request.port : ""}"
+    end
+
+    def actual_date date_text
+      puts date_text
+      date = Chronic.parse(date_text)
+      if(date > DateTime.now)
+        date - 86400
+      else
+        date
+      end
     end
 
     def parse_content content
@@ -146,6 +166,7 @@ class EastDulwich < Sinatra::Base
           :title => a_tag.text,
           :view_count => i.css("td")[1].text.to_i,
           :posts_count => i.css("td")[2].text.to_i,
+          :updated_at => actual_date(i.css("td").last.text.to_s.match(/(^.+PM|^.+AM)/)[1]),
           :person => {
             :nickname => i.css("td")[3].css("a").text.to_s,
             :id => i.css("td")[3].css("a").attribute("href").to_s.scan(/[0-9]+$/).flatten[0].to_i,
@@ -175,17 +196,20 @@ class EastDulwich < Sinatra::Base
         filesize: matches[2]
       }
     end
+    person = thread.css("strong a")
+    date_posted = DateTime.parse(thread.css(".PhorumReadBodyHead")[0].text.to_s.split(person.text).last)
     @thread = {
       title: doc.css(".PhorumReadBodySubject")[0].text,
       original_url: original_url,
       forum_id: params[:forum_id].to_i,
       id: params[:id],
+      date_posted: date_posted,
       content_html: parse_content(thread.css(".PhorumReadBodyText")[0].inner_html.strip.encode("utf-8")),
       attachments: attachments || [],
       person: {
-        nickname: thread.css("strong a").text,
-        id: thread.css("strong a").attribute("href").to_s.scan(/[0-9]+$/).flatten[0].to_i,
-        url: thread.css("strong a").attribute("href")
+        nickname: person.text,
+        id: person.attribute("href").to_s.scan(/[0-9]+$/).flatten[0].to_i,
+        url: person.attribute("href")
       }
     } 
     @posts = []
@@ -193,9 +217,11 @@ class EastDulwich < Sinatra::Base
     doc.css(".PhorumReadMessageBlock").each do |i|
       person = i.css(".PhorumReadBodyHead")[1].css("a") rescue nil
       person ||= i.css(".PhorumReadBodySubject")[1].css("a") rescue nil
+      date_posted = DateTime.parse(i.css(".PhorumReadBodyHead")[1].text.to_s.split(person.text).last) rescue nil
       post = {
         :title => i.css(".PhorumStdBlock")[0].css("div")[0].text, #css changes if you are logged in
         :id => @post_ids.shift,
+        :date_posted => date_posted,
         :content_html => parse_content(i.css(".PhorumReadBodyText")[0].inner_html.strip.encode("utf-8"))
       }
       if person

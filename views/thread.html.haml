@@ -5,7 +5,12 @@
     %h2.mega
       = @thread[:title]
     .article--author
-      = @thread[:person][:nickname]
+      %p.author
+        = @thread[:person][:nickname]
+      %p.datetime
+        %time{:datetime=>@thread[:date_posted].new_offset(0).iso8601}
+          = distance_of_time_in_words(Time.now, @thread[:date_posted])
+        ago
     .thread--opener
       .article--body-html
         = @thread[:content_html]
@@ -17,7 +22,12 @@
   - @posts.each do |post|
     %article
       .article--author
-        = post[:person][:nickname] rescue "Huh"
+        %p.author
+          = post[:person][:nickname] rescue "Huh"
+        %p.datetime
+          %time{:datetime=>post[:date_posted].new_offset(0).iso8601}
+            = distance_of_time_in_words(Time.now, post[:date_posted])
+          ago
       .article--body
         .article--body-html>
           = post[:content_html]
