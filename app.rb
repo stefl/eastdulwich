@@ -166,7 +166,7 @@ class EastDulwich < Sinatra::Base
           :title => a_tag.text,
           :view_count => i.css("td")[1].text.to_i,
           :posts_count => i.css("td")[2].text.to_i,
-          :updated_at => actual_date(i.css("td").last.text.to_s.match(/(^.+PM|^.+AM)/)[1]),
+          :updated_at => (actual_date(i.css("td").last.text.to_s.match(/(^.+PM|^.+AM)/)[1]) rescue Time.now),
           :person => {
             :nickname => i.css("td")[3].css("a").text.to_s,
             :id => i.css("td")[3].css("a").attribute("href").to_s.scan(/[0-9]+$/).flatten[0].to_i,
